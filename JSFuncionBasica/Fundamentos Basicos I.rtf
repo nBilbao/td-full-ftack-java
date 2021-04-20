@@ -1,0 +1,185 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-BoldOblique;}
+{\colortbl;\red255\green255\blue255;\red191\green100\blue38;\red32\green32\blue32;\red254\green187\blue91;
+\red153\green168\blue186;\red86\green132\blue173;\red133\green96\blue154;\red88\green118\blue71;}
+{\*\expandedcolortbl;;\csgenericrgb\c74902\c39216\c14902;\csgenericrgb\c12549\c12549\c12549;\csgenericrgb\c99608\c73333\c35686;
+\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c33725\c51765\c67843;\csgenericrgb\c52157\c37647\c60392;\csgenericrgb\c34510\c46275\c27843;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \cb3 function \cf4 a\cf5 ()\{\
+    \cf2 let \cf5 array=[]\cf2 ;\
+    for\cf5 (\cf2 let \cf5 i=\cf6 1\cf2 ; \cf5 i<=\cf6 255\cf2 ; \cf5 i++)\{\
+        array.\cf4 push\cf5 (i)\cf2 ;\
+    \cf5 \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (array)\cf2 ;\
+\cf5 \}\
+\cf4 a\cf5 ()\cf2 ;\
+\
+function \cf4 b\cf5 ()\{\
+    \cf2 let \cf5 suma=\cf6 0\cf2 ;\
+    for\cf5 (\cf2 let \cf5 i=\cf6 1\cf2 ; \cf5 i<=\cf6 1000\cf2 ; \cf5 i++)\{\
+        \cf2 if\cf5 (i%\cf6 2\cf5 ==\cf6 0\cf5 )\{\
+            suma+=i\cf2 ;\
+        \cf5 \}\
+    \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (suma)\cf2 ;\
+\cf5 \}\
+\cf4 b\cf5 ()\cf2 ;\
+\
+function \cf4 c\cf5 ()\{\
+    \cf2 let \cf5 suma=\cf6 0\cf2 ;\
+    for\cf5 (\cf2 let \cf5 i=\cf6 1\cf2 ; \cf5 i<=\cf6 5000\cf2 ; \cf5 i++)\{\
+        \cf2 if\cf5 (i%\cf6 2\cf5 ==\cf6 1\cf5 )\{\
+            suma+=i\cf2 ;\
+        \cf5 \}\
+    \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (suma)\cf2 ;\
+\cf5 \}\
+\cf4 c\cf5 ()\cf2 ;\
+\
+function \cf4 d\cf5 (array)\{\
+    \cf2 let \cf5 suma=\cf6 0\cf2 ;\
+    for\cf5 (\cf2 let \cf5 i=\cf6 0\cf2 ;\cf5 i<array.\cf7 length\cf2 ;\cf5 i++)\{\
+        suma+=array[i]\cf2 ;\
+    \cf5 \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (suma)\cf2 ;\
+\cf5 \}\
+\cf4 d\cf5 ([\cf6 2\cf2 ,\cf6 4\cf2 ,\cf6 4\cf5 ])\cf2 ;\
+\
+\
+function \cf4 e\cf5 (array)\{\
+    \cf2 let \cf5 maxNum=array[\cf6 0\cf5 ]\cf2 ;\
+    for\cf5 (\cf2 let \cf5 i=\cf6 1\cf2 ;\cf5 i<array.\cf7 length\cf2 ;\cf5 i++)\{\
+        \cf2 if\cf5 (maxNum<array[i])\{\
+            maxNum=array[i]\cf2 ;\
+        \cf5 \}\
+    \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (maxNum)\cf2 ;\
+\cf5 \}\
+\cf4 e\cf5 ([-\cf6 3\cf2 ,\cf6 3\cf2 ,\cf6 5\cf2 ,\cf6 7\cf5 ])\cf2 ;\
+\
+function \cf4 f\cf5 (array)\{\
+    \cf2 let \cf5 sum=\cf6 0\cf2 ;\
+    let \cf5 prom=\cf6 0.00\cf2 ;\
+    if\cf5 (array.\cf7 length\cf5 >\cf6 0\cf5 )\{\
+        \cf2 for\cf5 (\cf2 let \cf5 i=\cf6 0\cf2 ;\cf5 i<array.\cf7 length\cf2 ;\cf5 i++) \{\
+            sum+=array[i]\cf2 ;\
+        \cf5 \}\
+        prom=sum/array.\cf7 length\
+    \cf5 \}\cf2 else\cf5 \{\
+        
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (\cf8 "El array no debe estar vacio!"\cf5 )\cf2 ;\
+    \cf5 \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (prom)\cf2 ;\
+\cf5 \}\
+\cf4 f\cf5 ([\cf6 1\cf2 ,\cf6 3\cf2 ,\cf6 5\cf2 ,\cf6 7\cf2 ,\cf6 20\cf5 ])\cf2 ;\
+\
+function \cf4 g\cf5 ()\{\
+    \cf2 let \cf5 arrayB = []\cf2 ;\
+    for\cf5 (\cf2 let \cf5 i=\cf6 1\cf2 ;\cf5 i<=\cf6 50\cf2 ;\cf5 i++) \{\
+        \cf2 if\cf5 (i%\cf6 2\cf5 ==\cf6 1\cf5 )\{\
+            arrayB.\cf4 push\cf5 (i)\cf2 ;\
+        \cf5 \}\
+    \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (arrayB)\cf2 ;\
+\cf5 \}\
+\cf4 g\cf5 ()\cf2 ;\
+\
+function \cf4 h\cf5 (array\cf2 ,\cf5 y)\{\
+    \cf2 let \cf5 conteo=\cf6 0\cf2 ;\
+    let \cf5 arrayB=[]\cf2 ;\
+    for\cf5 (\cf2 let \cf5 i=\cf6 0\cf2 ;\cf5 i<array.\cf7 length\cf2 ;\cf5 i++)\{\
+        \cf2 if\cf5 (array[i]>y)\{\
+            conteo+=\cf6 1\cf2 ;\
+            \cf5 arrayB.\cf4 push\cf5 (array[i])\cf2 ;\
+        \cf5 \}\
+    \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (\cf8 "Existen "\cf5 +conteo+\cf8 " mayores que "\cf5 +y+\cf8 " y estos son: "\cf5 +arrayB)\cf2 ;\
+\cf5 \}\
+\cf4 h\cf5 ([\cf6 1\cf2 ,\cf6 3\cf2 ,\cf6 5\cf2 ,\cf6 7\cf5 ]\cf2 ,\cf6 3\cf5 )\cf2 ;\
+\
+function \cf4 y\cf5 (array)\{\
+    \cf2 for\cf5 (\cf2 let \cf5 i=\cf6 0\cf2 ;\cf5 i<array.\cf7 length\cf2 ;\cf5 i++)\{\
+        array[i]=array[i]*array[i]\cf2 ;\
+    \cf5 \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (array)\
+\}\
+\cf4 y\cf5 ([\cf6 1\cf2 ,\cf6 5\cf2 ,\cf6 10\cf2 ,\cf5 -\cf6 2\cf5 ])\cf2 ;\
+\
+function \cf4 j\cf5 (array)\{\
+    \cf2 for\cf5 (\cf2 let \cf5 i=\cf6 0\cf2 ;\cf5 i<array.\cf7 length\cf2 ;\cf5 i++)\{\
+        \cf2 if\cf5 (array[i]<\cf6 0\cf5 )\{\
+            array[i]=\cf6 0\cf2 ;\
+        \cf5 \}\
+    \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (array)\cf2 ;\
+\cf5 \}\
+\cf4 j\cf5 ([\cf6 1\cf2 ,\cf6 5\cf2 ,\cf6 10\cf2 ,\cf5 -\cf6 2\cf5 ])\cf2 ;\
+\
+function \cf4 k\cf5 (array)\{\
+    \cf2 let \cf5 min=array[\cf6 0\cf5 ]\cf2 , \cf5 max=array[\cf6 0\cf5 ]\cf2 , \cf5 prom=\cf6 0.0\cf2 , \cf5 sum=\cf6 0\cf2 ;\
+    for\cf5 (\cf2 let \cf5 i=\cf6 0\cf2 ;\cf5 i<array.\cf7 length\cf2 ;\cf5 i++)\{\
+        sum+=array[i]\cf2 ;\
+        if\cf5 (min>array[i])\{\
+            min=array[i]\cf2 ;\
+        \cf5 \}\
+        \cf2 else if\cf5 (max<array[i])\{\
+            max=array[i]\cf2 ;\
+        \cf5 \}\
+    \}\
+    prom=sum/array.\cf7 length\cf2 ;\
+    let \cf5 arrayB=[max\cf2 ,\cf5 min\cf2 ,\cf5 prom]\cf2 ;\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (arrayB)\cf2 ;\
+\cf5 \}\
+\cf4 k\cf5 ([\cf6 1\cf2 ,\cf6 5\cf2 ,\cf6 10\cf2 ,\cf5 -\cf6 2\cf5 ])\cf2 ;\
+\
+function \cf4 l\cf5 (array)\{\
+    \cf2 let \cf5 temp=array[array.\cf7 length\cf5 -\cf6 1\cf5 ]\cf2 ;\
+    \cf5 array[array.\cf7 length\cf5 -\cf6 1\cf5 ]=array[\cf6 0\cf5 ]\cf2 ;\
+    \cf5 array[\cf6 0\cf5 ]=temp\cf2 ;\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (array)\cf2 ;\
+\cf5 \}\
+\cf4 l\cf5 ([\cf6 1\cf2 ,\cf6 5\cf2 ,\cf6 10\cf2 ,\cf5 -\cf6 2\cf5 ])\cf2 ;\
+\
+function \cf4 m\cf5 (array)\{\
+    \cf2 for\cf5 (\cf2 let \cf5 i=\cf6 0\cf2 ;\cf5 i<array.\cf7 length\cf2 ;\cf5 i++)\{\
+        \cf2 if\cf5 (array[i]<\cf6 0\cf5 )\{\
+            array[i]=\cf8 "Dojo"\cf2 ;\
+        \cf5 \}\
+    \}\
+    
+\f1\i\b \cf7 console
+\f0\i0\b0 \cf5 .\cf4 log\cf5 (array)\cf2 ;\
+\cf5 \}\
+\
+\cf4 m\cf5 ([-\cf6 1\cf2 ,\cf5 -\cf6 3\cf2 ,\cf6 2\cf5 ])\cf2 ;\
+\
+\
+\
+}
