@@ -1,0 +1,28 @@
+#wrapper{
+    border: solid 1px black;
+    background-color: dodgerblue;
+    /*text-align: center;*/
+}
+
+#header{
+    background-color: antiquewhite;
+    border: solid 1px black;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+}
+
+#botonera{
+    background-color: aquamarine;
+
+}
+.botones{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    display: inline-block;
+}
+.boton{
+    width: 290px;
+    height: 50px;
+}
