@@ -1,0 +1,86 @@
+@colorPrimario: #26418f;
+@colorTexto: #ffff;
+#wrapper{
+    width: 100%;
+    min-height: 900px;
+    background-color: white;
+    padding: 2%;
+}
+#header {
+    width: 98%;
+    height: 297px;
+    background-color: @colorPrimario;
+    margin-top: -15px;
+    img {
+        width: 10%;
+        margin-left: 50%;
+        display: inline-block;
+        margin-top: 87px;
+
+    }
+    h1{
+        color: @colorTexto;
+        margin-left: 2%;
+        vertical-align: top;
+        text-align: left;
+        margin-top: -81px;
+    }
+    p{
+        color: @colorTexto;
+        text-align: right;
+        font-family: SansSerif;
+        font-size: 20px;
+        margin-right: 2%;
+    }
+}
+#menuPrincipal{
+    width: 98%;
+    min-height: 10px;
+    display: block;
+    vertical-align: bottom;
+}
+#menuPrincipal nav{
+    border: solid 1px @colorPrimario;
+}
+#menu{
+    display: inline-block;
+    width: 20%;
+    min-height: 500px;
+    vertical-align: top;
+}
+#content{
+    width: 78%;
+    min-height: 500px;
+    display: inline-block;
+    background-color: @colorTexto;
+    margin-left: -5px;
+}#tabla{
+    width: 100%;
+    min-height: 100px;display: block;
+ }
+ #footer{
+     width: 98%;
+     min-height: 180px;
+     background-color: @colorPrimario;
+     display: inline-block;
+     h5{
+         text-align: center;
+         color: @colorTexto;
+     }
+     h4{
+
+         text-align: center;
+         color: @colorTexto;
+         text-decoration-line: underline;
+         margin-top: 65px;
+     }
+ }
+@media only screen and (max-width: 680px){
+    /* we will set these stylings only if the device is a screen with a width of 480px or less */
+    #menu {
+    display: none;
+    }
+    #content{
+        width: 100%;
+    }
+}
