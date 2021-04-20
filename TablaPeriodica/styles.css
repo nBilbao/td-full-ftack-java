@@ -1,0 +1,89 @@
+div{
+    border: solid 1px grey;
+    font-family: Arial;
+    font-size: small;
+    color: rgb(38,27,172);
+}
+#wrapper{
+    width: 1800px;
+    height: 1200px;
+
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto
+                            auto auto auto auto auto
+                            auto auto auto auto auto
+                            auto auto auto auto;
+    /*background-color: #2196F3;*/
+    background-color: rgb(238,238,238);
+    padding: 10px;
+
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 2px 20px 20px 20px;
+    font-size: 15px;
+    text-align: center;
+    width: 45px;
+    height: 53px;
+    margin: 2px;
+
+
+}
+p{
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 29px;
+    text-align: center;
+    margin-left: 19px;
+}
+h5{
+    color: red;
+}
+
+#numeroGuias{
+    background-color: transparent;
+    border: none;
+
+}
+#borrada{
+    border: none;
+    background-color: rgb(238,238,238);
+}
+#azules{
+    background-color: rgb(102,153,252);
+}
+#rosadas{
+    background-color: rgb(240,147,144);
+}
+#amarillas{
+    background-color: rgb(254, 203, 0);
+}
+#verdes{
+    background-color: rgb(29,159,27);
+}
+.margenIzquierdo{
+    margin-left: 55px;
+}
+div span{
+    font-size:29px;
+    display: block;
+    font-weight: bold;
+
+}
+.margenDerech{
+    margin-right: 10px;
+}
+#borrada2{
+    border: none;
+    background-color: rgb(238,238,238);
+    width: 10px;
+    height: 10px;
+}
+.espacio{
+    margin-left: 30px;
+}
