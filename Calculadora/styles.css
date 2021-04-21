@@ -1,28 +1,30 @@
-#wrapper{
-    border: solid 1px black;
-    background-color: dodgerblue;
-    /*text-align: center;*/
-}
 
-#header{
-    background-color: antiquewhite;
-    border: solid 1px black;
-    width: 300px;
-    height: 100px;
-    text-align: center;
-}
-
-#botonera{
-    background-color: aquamarine;
-
-}
-.botones{
-    width: 60px;
-    height: 60px;
-    background-color: red;
+.calculadora{
     display: inline-block;
-}
-.boton{
-    width: 290px;
-    height: 50px;
-}
+    margin:0 auto;
+    padding:20px;
+    background-color:#2980b9;
+    min-width:15%;
+    min-height:550px;
+    border-radius: 25px;
+    
+  }
+  .calculadora div button{
+    width:71px;
+    height: 70px;
+    font-size: 25px;
+    display: inline-block;
+    margin-bottom: 3px;
+  }
+ 
+  #resultado{
+    display:block;
+    text-align: right;
+    font-size: 40px;
+    margin-bottom: 50px;
+    width:300px;
+    height: 100px;
+    line-height: 100px;
+    background-color:#fff;
+    border-radius: 10px;
+  }
