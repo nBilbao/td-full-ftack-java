@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <form id="formulario">
+
+                <legend><h1>Formulario</h1></legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre"  placeholder="Nombre">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido"  placeholder="Apellidos">
+                <label for="email">e-mail:</label>
+                <input type="text" id="email"  placeholder="Correo electrónico">
+
+                <fieldset>
+                    <input type="radio" name="sexo" id="femenino" value="Mujer">
+                    <label for="femenino">Femenino</label>
+                    <input type="radio" name="sexo" id="masculino" value="Hombre">
+                    <label for="masculino">Masculino</label>
+                </fieldset>
+                <button type="submit" value="Submit" form="formulario" onsubmit="return validaciones()"> Enviar </button>
+            </form>
+        </div>
+    </div>
+    <script src="funcionalidad.js"></script>
+    
+</body>
+</html>
