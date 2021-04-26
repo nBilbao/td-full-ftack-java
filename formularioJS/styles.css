@@ -1,0 +1,60 @@
+body{
+    background-color: dodgerblue;
+}
+#wrapper{
+    width: 100%;
+    min-height: 600px;
+    background-color: dodgerblue;
+    font-family: SansSerif;
+
+
+}
+#contenedorFormulario{
+    width: 30%;
+    min-height: 25%;
+    border: solid 4px blue;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5%;
+    font-size: 30px;
+    margin-left: 30%;
+    margin-top: 10%;
+
+}
+label{
+    display: block;
+}
+input{
+    display: block;
+    font-size: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid dodgerblue;
+    width: 90%;
+
+}
+button{
+    margin-top: 10%;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    margin-left: 40%;
+    background-color: dodgerblue;
+    border: none;
+}
+#show{
+    margin-top: 3%;
+    width: 80%;
+    min-height: 20%;
+    background-color: black;
+    color: white;
+    display: block;
+    border: solid 1px black;
+
+}
+.miniForm{
+    display: block;
+    text-align: left;
+
+}

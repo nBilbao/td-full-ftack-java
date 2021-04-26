@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="wrapper">
+
+    <div id="contenedorFormulario">
+        <div class="miniForm">
+            <label>Ingrese su nombre:</label>
+            <input name="name" id="name">
+        </div>
+
+        <div class="miniForm">
+            <label>Apellido:</label>
+            <input name="lastName" id="lastName">
+        </div>
+        <div class="miniForm">
+            <label>Ingrese año de nacimiento:</label>
+            <input type="date" id="calendar" name="trip-start"
+                   value="2018-07-22"
+                   min="2018-01-01" max="2018-12-31">
+        </div>
+        <div class="miniForm">
+            <button name="mostrar"  onclick="mostrarUsrs()">MOSTRAR</button>
+        </div>
+
+        <button name="send"  onclick="addUser()">ENVIAR</button>
+
+        <div id="show">  </div>
+
+    </div>
+
+
+</div>
+
+
+<script src="operaciones.js"></script>
+</body>
+</html>
