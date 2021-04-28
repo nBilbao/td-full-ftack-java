@@ -1,0 +1,125 @@
+body{
+    background-color: white;
+    font-family: sans-serif;
+
+}
+#wrapper{
+    width: 60%;
+    min-height: 80px;
+    border: solid 15px rgb(233,233,233);
+    border-radius: 20px;
+    margin: 10% 0 10% 10%;
+}
+#wrapper2 {
+    width: 60%;
+    min-height: 800px;
+    border: solid 15px rgb(233, 233, 233);
+    border-radius: 20px;
+    margin: 10% 0 10% 10%;
+    background-color: white;
+    color: black;
+    font-size: 28px;
+}
+#wrapper3 {
+    width: 60%;
+    min-height: 800px;
+    border: solid 15px rgb(233, 233, 233);
+    border-radius: 20px;
+    margin: 10% 0 10% 10%;
+    background-color: white;
+    color: black;
+    font-size: 28px;
+}
+label{
+    font-size: 18px;
+    margin-top: 1%;
+}
+.titulo{
+    color: rgb(97,97,97);
+    margin-left: 8%;
+    margin-top: 5%;
+    font-size: 30px;
+}
+#column1{
+    display: inline-block;
+    min-height: 100px;
+    width: 45%;
+    margin-left: 8%;
+    margin-bottom: 8%;
+}
+#column2{
+    display: inline-block;
+    margin-left: 1%;
+    min-height: 100px;
+    width: 45%;
+    vertical-align: bottom;
+    margin-bottom: 8%;
+}
+.cont{
+    border: solid 2px grey;
+    border-radius: 10px;
+    width: 91%;
+    height: 45px;
+    display: inline-block;
+    color: grey;
+    font-size: 25px;
+    padding-left: 2%;
+    margin-bottom: 5%;
+}
+p{
+    display: inline-block;
+    font-size: 25px;
+
+}
+.contLittle {
+    border: solid 2px grey;
+    border-radius: 10px;
+    width: 80%;
+    height: 45px;
+    display: inline-block;
+    font-size: 25px;
+}
+.botones{
+    width: 45%;
+    height: 45px;
+    border-radius: 5px;
+    border: 4px solid rgb(17,116,177);;
+    font-size: 25px;
+}
+#volver{
+    color: rgb(17,116,177);
+    background-color: white;
+    margin-top: 6%;
+}
+#siguiente{
+    background-color: rgb(17,116,177);
+    color: white;
+    margin-left: 49%;
+    margin-top: 6%;
+}
+#wrapper2 fieldset{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid grey;
+}
+#wrapper2 legend{
+    margin: 5% 0 5% 5%;
+
+}
+#wrapper2 input[type=radio]{
+    width: 30px;
+    height: 30px;
+    margin: 0 0 5% 8%;
+
+
+}
+#mostrarResultados{
+    margin-left: 28%;
+}
+span{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<div id="wrapper">
+
+    <div class="titulo"> <h1>Ingresa tus datos personales</h1></div>
+
+    <div id="column1">
+        <label for="rut">RUT (sin puntos ni guión)</label><br>
+        <input class="cont" type="text" name="rut" id="rut" placeholder="RUT"><br>
+
+        <label for="serie">Número de Serie o Documento</label><br>
+        <input class="cont" type="number" name="serie" id="serie" placeholder="0000000001"><br>
+
+        <label for="email">E-mail  <span id="emailOK"></span> </label><br>
+        <input class="cont" type="text" name="email" id="email" placeholder="email@dominio.com"><br>
+
+        <label for="celular">Confirmar Número de Celular</label><br>
+        <p>+569</p>
+        <input class="contLittle" type="text" name="celular" id="celular"><br>
+
+        <button id="volver" class="botones">Volver</button>
+
+
+    </div>
+    <div id="column2">
+        <label for="conSerie">Confirma Número de Serie o Documento</label><br>
+        <input class="cont" type="number" name="conSerie" id="conSerie" placeholder="0000000001"><br>
+               
+        <label for="conEmail">Confirmar E-mail</label><br>
+        <input class="cont" type="text" name="conRut" id="conEmail" placeholder="email@dominio.com"><br>
+        
+
+        <label for="conCelular">Confirmar Número de Celular</label><br>
+        <p>+569</p>
+        <input class="contLittle" type="text" name="conCelular" id="conCelular"><br>
+
+        <button id="siguiente" class="botones" onclick="validaciones()">Siguiente</button>
+
+
+    </div>
+
+
+</div>
+<div id="wrapper2" style="display: none">
+    <div class="titulo"><h1>Elije tu Modalidad de Pago</h1></div>
+
+    <fieldset>
+        <legend>Para recibirlo en tu Cuenta Bancaría, elige una opción</legend>
+        <input type="radio" id="ctaRut" name="modalidad" value="ctaRut" checked>
+        <label for="ctaRut">Cuenta RUT (Banco Estado)</label>
+        <input type="radio" id="otroBanco" name="modalidad" value="otro">
+        <label for="otroBanco">Cuenta de otro banco</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Transferencia a Cuenta de Ahorro Voluntaria (Cuenta 2) en tu AFP</legend>
+        <input type="radio" id="cta2" name="modalidad" value="cta2">
+        <label for="cta2">Cuenta de Ahorro Voluntaria (Cuenta 2)</label>
+
+    </fieldset>
+    <button id="mostrarResultados" class="botones" onclick="mostrarResul()">Mostrar</button>
+
+
+</div>
+
+<div id="wrapper3" style="display: none">
+    <span id="status"></span>
+</div>
+
+
+<script src="funcionalidad.js"></script>
+</body>
+</html>
