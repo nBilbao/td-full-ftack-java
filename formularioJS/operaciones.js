@@ -6,7 +6,7 @@ let fecha = document.querySelector('input[type="date"]').value;
 let persona={name: nombre, lastName: apellido,date:fecha};
 let arrayUser=[];
 
-function calcularEdad() {
+/*function calcularEdad() {
     var hoy = new Date();
     var cumpleanos = fecha;
     var edad = hoy.getFullYear() - cumpleanos.getFullYear();
