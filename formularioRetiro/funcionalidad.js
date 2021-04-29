@@ -136,22 +136,23 @@ function cerrarVentanaSecundaria(){
 }
 
 function validaciones(){
-    let rut = validacionRut().value;
-    let serie = validacionNroSerie().value;
-    let email = validacioEmail().value;
-    let celular = validacionCel().value;
+    let rut = validacionRut();
+    let serie = validacionNroSerie();
+    let email = validacioEmail();
+    let celular = validacionCel();
 
-    if(serie == false){
-        console.log('numero de serie invalido');
+    if(serie==false){
+        alert('numero de serie invalido');
+        
     }
     else if(email==false){
-        console.log('Email invalido');
+        alert('Email invalido');
     }
     else if(celular==false){
-        console.log('celular invalido');
+        alert('celular invalido');
     }
     else if(rut==false){
-        console.log('verifique el rut')
+        alert('verifique el rut')
     }
     else{
         console.log('todo ok por acá!');
