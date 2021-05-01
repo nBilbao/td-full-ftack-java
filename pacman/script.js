@@ -1,21 +1,24 @@
 var mundo=[
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
     [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 ];
 
-var pacman = {
-    x: 20,
-    y: 22
-
-};
+var pacman = {x: 1,y: 1};
+var score =0;
 function displayMundo(){
     var output ='';
 
@@ -28,8 +31,11 @@ function displayMundo(){
             else if(mundo[i][j]==0){
                 output+="<div class='coin'></div>";
             }
-            if(mundo[i][j]==2){
+            else if(mundo[i][j]==2){
                 output+="<div class='empty'></div>";
+            }
+            else if(mundo[i][j]==3){
+                output+="<div class='cereza'></div>";
             }
 
         }
@@ -37,37 +43,53 @@ function displayMundo(){
 
     }
     document.getElementById("mundo").innerHTML=output;
-
+    
 
 }
 function displayPacman(){
-    document.getElementById('pacman').style.top = pacman.y +"px";
-    document.getElementById('pacman').style.left = pacman.x +"px";
+    document.getElementById("pacman").style.top = pacman.y*20 +"px";
+    document.getElementById("pacman").style.left = pacman.x*20 +"px";
 }
 function displayScore(){
-    document.getElementById('score').innerHTML=socre;
+    document.getElementById('score').innerHTML=score;
 }
 displayMundo();
 displayPacman();
 displayScore();
+
 document.onkeydown = function (e){
-    if(e.keyCode==37){
-        pacman.x -= 20;
+
+    if(e.key=="ArrowLeft"){
+        pacman.x--;
     }
-    else if(e.keyCode==39){
-        pacman.x += 20;
+    else if(e.key=="ArrowRight"){
+        pacman.x++;
     }
-    else if(e.keyCode==38){
-        pacman.y -= 22;
+    else if(e.key=="ArrowUp"){
+        pacman.y--;
     }
-    else if(e.keyCode==40){
-        pacman.y += 22;
+    else if(e.key=="ArrowDown"){
+        pacman.y++;
     }
-    if(mundo[pacman.y][pacman.x]==0){
+
+
+
+    
+    
+
+    if(mundo[pacman.y][pacman.x]==0 ){
+        mundo[pacman.y][pacman.x]=2;
+        score+=10;
+        displayMundo();
+        displayScore();
+    }
+    else if(mundo[pacman.y][pacman.x]==3){
         mundo[pacman.y][pacman.x]=2;
         score+=100;
         displayMundo();
+        displayScore();
     }
-    console.log(e.keyCode);
+
+    console.log(e.key);
     displayPacman();
 }
