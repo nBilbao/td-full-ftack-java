@@ -1,0 +1,34 @@
+
+
+#wrapper{
+    width: 90%;
+    min-height: 100px;
+    margin-left: 3%;
+    margin-top: 50px;
+    padding: 1%;
+    border: solid 1px black;
+    
+
+}
+.contenedor{
+    text-align: center;
+    width: 70%;
+    height: 110px;
+    margin-left: 15%;
+    
+}
+.ninjaFrame{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-top: 3px;
+    background-image: url("ninja.jpg");
+    background-size: cover;
+    
+}
+button{
+    background-color: rgb(33, 65, 2);
+    color: white;
+    box-shadow: 1px black;
+    margin-left: 10%;
+}
