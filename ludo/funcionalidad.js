@@ -81,18 +81,15 @@ var pos={
     y: 1
 };
 function mostrarPeon(){
-    document.getElementById('peon').style.top = (pos.y)+"px";
-    document.getElementById('peon').style.left = (pos.x)+"px";
+    document.getElementById('peon').style.top = (pos.y*700)+"px";
+    document.getElementById('peon').style.left = (pos.x*200)+"px";
 }
-function mover(){
-    let mov = document.getElementById("placeholder").value;
-    let count=0;
-    coun +=mov;
-    if(coun<6){
-        pos.x=count;
-        mostrarPeon();
-    }
-}
+$(document).ready(function() {
+    $('#cambio').click(function(){
+        $('#content').css('background-color', '#FF4000');
+    });                       
+});  
+
 
 rellenar();
 mostrarPeon();

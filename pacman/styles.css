@@ -28,6 +28,13 @@ div.coin{
     height: 20px;
     position: absolute;
 }
+#pacman2{
+    background: url("pacman.gif") no-repeat center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
 div#score{
     border: 1px solid white;
     color: white;
@@ -45,4 +52,12 @@ div.cereza{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+#ghost{
+    background: url("ghost.gif") no-repeat center;
+    background-size: cover;
+    width: 20px;
+    height: 25px;
+    position: absolute;
 }
