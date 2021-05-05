@@ -1,0 +1,25 @@
+
+body{
+    background-image: url("img/sky.jpg");
+}
+
+#wrapper{
+    width: 50%;
+    min-height: 900px;
+    margin-left: 20%;
+    margin-top: 100px;
+    
+}
+.contenedores{
+    width: 24%;
+    min-height: 200px;
+    display: inline-block;
+    margin-bottom: 3px;
+    border: solid 1px black;
+}
+.contenedores img{
+    width: 100%;
+    vertical-align: top;
+    height: 200px;
+    background-color: yellow;
+}
