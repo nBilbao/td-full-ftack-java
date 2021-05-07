@@ -1,0 +1,16 @@
+body{
+    padding: 5%;
+    background-color: rgb(37, 36, 36);
+}
+#container{
+    width: 90%;
+    min-height: 900px;
+    background-color: aquamarine;
+}
+
+.marcoImagen{
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+    display: inline-block; 
+}
