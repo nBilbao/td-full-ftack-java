@@ -45,3 +45,5 @@ function repetirValores(array){
 }
 
 repetirValores([4,'Ulysses', 42, false]);
+console.log("Gool");
+
