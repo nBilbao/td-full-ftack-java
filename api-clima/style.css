@@ -1,0 +1,11 @@
+#container{
+    width: 30%;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+salida{
+    border: solid 2px black;
+    width: 300px;
+    height: 400px;
+    
+}
