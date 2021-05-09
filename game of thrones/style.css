@@ -1,0 +1,42 @@
+body{
+    padding: 10%;
+    background-image: url(/img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.casa{
+    width: 200px;
+    height: 200px;
+}
+#description{
+    width: 870px;
+    min-height: 400px;
+    padding: 5%;
+
+}
+#stark{
+    background-image: url(/img/stark.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#targaryen{
+    background-image: url(/img/targaryen.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+#lannister{
+    background-image: url(/img/lannister.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+#baratheon{
+    background-image: url(/img/baratheon.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
