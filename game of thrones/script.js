@@ -27,12 +27,12 @@ $(document).ready(function () {
         console.log(res.name)
             var titulos="";
 
-            $('#name').html('Name: '+res.name);
-            $('#words').html('<br>Words: '+res.words);
+            $('#name').html('Name:  '+res.name);
+            $('#words').html('<br>Words:  '+res.words);
             for(let i=0;i<res.titles.length;i++){
                 titulos+=" "+res.titles+" ";
             }
-            $('#titles').html('Titles: '+titulos);    
+            $('#titles').html('Titles:  '+titulos);    
             },"JSON");
 
 

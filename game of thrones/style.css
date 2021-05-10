@@ -1,18 +1,22 @@
 body{
-    padding: 10%;
+    padding: 10% 10% 20% 10%;
     background-image: url(/img/fondo.jpg);
     background-size: cover;
     background-position: center;
+    
 }
 
 .casa{
-    width: 200px;
-    height: 200px;
+    border: solid 5px white;
+    height: 480px;
 }
 #description{
-    width: 870px;
-    min-height: 400px;
+    
+    background-color: black;
+    color: white;
+    height: 800px;
     padding: 5%;
+    border: solid 5px white;
 
 }
 #stark{
