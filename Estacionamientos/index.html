@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Control de estacionamiento.</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="contendor" class="container is-widescreen">
+        <div class="notification is-grey">
+ 
+            <div class="field">
+                <label class="label">Patente</label>
+                <div class="control ">
+                <input id="patente" class="input" type="text" placeholder="Ingrese Patente">
+                
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Tipo de Vehiculo</label>
+                <div class="control">
+                <div   class="select">
+                    <select id="tipo">
+                    <option>Seleccione</option>
+                    <option>Camioneta</option>
+                    <option>Auto</option>
+                    <option>Camión</option>
+                    <option>Moto</option>
+                    </select>
+                </div>
+                </div>
+            </div>
+            
+            <div class="field">
+                <label class="label">Hora de ingreso</label>
+                <div class="control">
+                    <input id="reloj" class="input is-link has-text-success" type="text"  disabled>
+                </div> 
+            </div>
+            
+            
+            <div class="field">
+                <div class="control">
+
+                    <div class="buttons has-addons is-centered">
+                        <button id="sub" class="button is-link is-selected">Agregar</button>
+                      </div>
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="table-container">
+            <table class="table is-bordered is-striped  is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th><abbr title="numero">Nro</abbr></th>
+                        <th><abbr title="Patente">Patente</abbr></th>
+                        <th><abbr title="Tipo">Tipo Vehiculo</abbr></th>
+                        <th><abbr title="Hora de ingreso">Hora de ingreso</abbr></th>
+                        <th><abbr title="Seleccione">seleccion</abbr></th>
+                    </tr>
+                    
+                </thead>
+            </table>
+          </div>
+    </div>
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Modal title</p>
+            <button class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success">Save changes</button>
+            <button class="button">Cancel</button>
+          </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
