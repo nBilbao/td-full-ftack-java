@@ -6,15 +6,7 @@ $(document).ready(function() {
     var ciudad="";
     
 
-    // $('form').submit(function() {
-    //     // your code here (build up your url)
-    //     $.get(url, function(res) {
-    //         // your code here
-    //     }, 'json');
-    //     // don't forget to return false so the page doesn't refresh
-    //     return false;
-    // });
-
+    
     $('#enviar').click(function (e) { 
         ciudad = $('#ciudad').val();
         
@@ -22,10 +14,7 @@ $(document).ready(function() {
         $.get(urlFinal,function (res) {
             console.log(res);
             var salida="";
-            // for(let i=0;i<res.weather.lenght;i++){
-            //     salida+=res.weather[i];
-            // }
-            // console.log(salida);
+            
 
             salida=ciudad+": "+res.weather[0].description
             +"<br>Temperatura: "+res.main.temp

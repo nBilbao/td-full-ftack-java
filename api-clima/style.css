@@ -1,3 +1,9 @@
+body{
+    background-image: url("img/puntaarenas.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
 #container{
     width: 30%;
     margin-left: 20%;
