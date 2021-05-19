@@ -1,5 +1,5 @@
 body{
-    padding: 10% 10% 20% 10%;
+    padding: 2% 10% 20% 10%;
     background-image: url(/img/fondo.jpg);
     background-size: cover;
     background-position: center;
@@ -8,7 +8,7 @@ body{
 
 .casa{
     border: solid 5px white;
-    height: 480px;
+    height: 350px;
 }
 #description{
     

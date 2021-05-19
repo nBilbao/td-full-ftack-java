@@ -17,7 +17,7 @@ $(document).ready(function () {
                 casa=229;
                 break;
             case "baratheon":
-                casa=285;
+                casa=15;
                 break;
 
         }
@@ -34,6 +34,9 @@ $(document).ready(function () {
             }
             $('#titles').html('Titles:  '+titulos);    
             },"JSON");
+
+
+            //$('.modal').show(e);
 
 
 
