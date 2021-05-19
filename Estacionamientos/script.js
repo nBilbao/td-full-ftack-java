@@ -9,6 +9,7 @@ var contador=1;
         let patente = $('#patente').val();
         let tipo = $('#tipo').val();
         let fecha = new Date($.now());
+        var elemento ="";
 
         if(patente==""){
             alert("Debe ingresar una patente");
@@ -21,7 +22,14 @@ var contador=1;
         vehiculos={pos: contador, patente: patente, tipo: tipo, fechaIngreso: fecha};
         clientes[contador]=vehiculos;
 
-        $('table').append('<tr id="'+vehiculos.pos+'"> <td>'+vehiculos.pos+'</td> <td>'+vehiculos.patente+'</td> <td>'+vehiculos.tipo+'</td><td>'+vehiculos.fechaIngreso.getHours()+':'+vehiculos.fechaIngreso.getMinutes()+'</td><td> <div id="columna'+vehiculos.pos+'" style="display: none" class="field"><div class="control">      <div class="buttons has-addons is-centered"><button id="del'+vehiculos.pos+'" class="button is-danger">Eliminar</button><button id="edit'+vehiculos.pos+'" class="button is-success">Editar</button></div></div></div></td> </tr>'); 
+
+        elemento +='<tr id="'+vehiculos.pos+'"';
+        elemento +='><td>'+vehiculos.pos+''
+        elemento +=
+        elemento +=
+
+
+        $('table').append('<tr id="'+vehiculos.pos+'"> <td>'+vehiculos.pos+'</td> <td>'+vehiculos.patente+'</td> <td>'+vehiculos.tipo+'</td><td>'+vehiculos.fechaIngreso.getHours()+':'+vehiculos.fechaIngreso.getMinutes()+'</td><td> <div id="columna'+vehiculos.pos+'" class="field"><div class="control"><div class="buttons has-addons is-centered"><button id="del'+vehiculos.pos+'" class="button">Eliminar</button><button id="edit'+vehiculos.pos+'" class="button">Editar</button></div></div></div></td> </tr>'); 
         
         contador++;    
         console.log(clientes);
@@ -30,6 +38,9 @@ var contador=1;
         $( '#'+vehiculos.pos ).mouseover(function() {
             $(this).css("background-color","hsl(217, 71%, 53%)");
             $(this).css("color","white");
+            $('button').css("display","inline");
+
+            
             
             
            
@@ -41,37 +52,9 @@ var contador=1;
 
         
     });
-    $('#sub').click(function(){ 
-
-        
-
-
-
-
-
-    });
-
-
-    
-    $(document).on('click','tr',function(){
-        
-        
-        
-
-
-
-
-    });
-   
-    
-
-
 
     
     
-
-
-
 
     function mostrarHora(){
         var horaActual = new Date($.now())
