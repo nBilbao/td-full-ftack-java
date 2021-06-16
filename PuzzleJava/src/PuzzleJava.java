@@ -14,8 +14,6 @@ public class PuzzleJava {
             sum = sum + array[i];
             if(array[i]>10){
                 arrayMayores.add(array[i]);
-
-
             }
         }
         return arrayMayores;
@@ -81,6 +79,63 @@ public class PuzzleJava {
         }
         return numbers;
     }
+    public ArrayList<Integer> pregunta5(){
+        ArrayList<Integer> array= new ArrayList<Integer>();
+        Random random = new Random();
+        int numero=0;
+
+        for(int i=0;i<10;i++){
+            numero = random.nextInt(100);
+
+            if(numero<55){
+                numero = Math.abs(numero-100);
+                array.add(numero);
+            }
+            else{
+                array.add(numero);
+            }
+        }
+        array.sort(Integer::compareTo);
+        System.out.println("\nEl valor mínimo del arreglo es: "+array.get(0));
+        System.out.println("El valor máximo del arreglo es: "+array.get(array.size()-1));
+
+        return array;
+    }
+
+    public String pregunta6(){
+        String cadena="";
+
+        for(int i=0;i<5;i++){
+
+            int rnd = (int) (Math.random() * 52); // or use Random or whatever
+            char base = (rnd < 26) ? 'A' : 'a';
+            char caracter= (char) (base + rnd % 26);
+            cadena= cadena+caracter;
+        }
+        return cadena;
+    }
+    public ArrayList<String> pregunta7() {
+        ArrayList<String> array = new ArrayList<String>();
+        String cadena = "";
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 5; j++) {
+
+                int rnd = (int) (Math.random() * 52); // or use Random or whatever
+                char base = (rnd < 26) ? 'A' : 'a';
+                char caracter = (char) (base + rnd % 26);
+                cadena = cadena + caracter;
+            }
+            array.add(cadena);
+            cadena = "";
+
+        }
+
+
+
+
+        return array;
+    }
+
 
 
 

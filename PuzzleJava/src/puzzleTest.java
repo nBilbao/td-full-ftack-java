@@ -6,6 +6,10 @@ public class puzzleTest {
         System.out.println(puzzle.pregunta2());
         System.out.println(puzzle.pregunta3());
         System.out.println(puzzle.pregunta4());
+        System.out.println(puzzle.pregunta5());
+        System.out.println(puzzle.pregunta6());
+        System.out.println(puzzle.pregunta7());
+
 
     }
 }
