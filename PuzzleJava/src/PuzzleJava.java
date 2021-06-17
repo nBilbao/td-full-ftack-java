@@ -21,8 +21,6 @@ public class PuzzleJava {
 
     public ArrayList<String> pregunta2(){
 
-        int i;
-
         ArrayList<String> names = new ArrayList<String>();
         ArrayList<String> namesOrdenados = new ArrayList<String>();
 
@@ -34,14 +32,15 @@ public class PuzzleJava {
 
         Collections.shuffle(names);
         System.out.println("\n"+names);
-        for(i=0;i<names.size();i++){
+        for(String datos:names){
 
-            if(names.get(i).length()>5){
-                namesOrdenados.add(names.get(i));
+            if(datos.length()>5){
+                namesOrdenados.add(datos);
             }
         }
         return namesOrdenados;
     }
+    
     public ArrayList<Character> pregunta3(){
         ArrayList<Character> array = new ArrayList<Character>();
 
@@ -95,7 +94,9 @@ public class PuzzleJava {
                 array.add(numero);
             }
         }
-        array.sort(Integer::compareTo);
+        // metodo de ordaniemiento mas complejo
+        //array.sort(Integer::compareTo);
+        Collections.sort(array);
         System.out.println("\nEl valor mínimo del arreglo es: "+array.get(0));
         System.out.println("El valor máximo del arreglo es: "+array.get(array.size()-1));
 
