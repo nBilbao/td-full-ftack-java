@@ -8,12 +8,9 @@ public class MapasHash {
         mapa.put(key,value);
     }
 
-    public String getLyric(String key){
-
-        String liryc = mapa.get(key);
-
-        return liryc;
-
+    public String getLyric(String key)
+    {
+        return mapa.get(key);
     }
 
 }
