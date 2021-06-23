@@ -6,20 +6,20 @@ public class Samurai extends Human{
         setHealth(200);
     }
 
-    public void golpeMortal(Human a){
+    public void deadBlow(Human a){
 
         a.setHealth(0);
         this.setHealth(getHealth()/2);
 
     }
 
-    public void meditar(){
+    public void meditate(){
 
         this.setHealth(this.getHealth()+(getHealth()/2));
 
     }
 
-    public Integer cuantos(){
+    public Integer howMany(){
 
         return this.getHealth();
 

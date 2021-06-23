@@ -10,13 +10,13 @@ public class Wizard extends Human {
 
     }
 
-    public void curar(Human a) {
+    public void heal(Human a) {
 
         a.setHealth(a.getHealth()+getIntelligence());
 
     }
 
-    public void bolaFuego(Human a){
+    public void fireBall(Human a){
 
         a.setHealth(a.getHealth() - (getIntelligence()*3));
 

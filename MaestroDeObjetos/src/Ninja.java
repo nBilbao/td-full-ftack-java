@@ -5,13 +5,13 @@ public class Ninja extends Human{
         setStealth(10);
     }
 
-    public void robar(Human a){
+    public void steal(Human a){
 
         a.setHealth(a.getHealth()-this.getStealth());
         this.setHealth(this.getHealth()+this.getStealth());
 
     }
-    public void escapar(){
+    public void runaWay(){
         this.setHealth(this.getHealth()-10);
     }
     @Override

@@ -19,23 +19,23 @@ public class HumanTest {
 
 
         System.out.println(villano.getHealth());
-        mago.bolaFuego(villano);
+        mago.fireBall(villano);
         System.out.println(villano.getHealth());
 
-        ninja.robar(villano);
+        ninja.steal(villano);
         System.out.println(villano.getHealth());
         System.out.println(ninja);
 
-        ninja.escapar();
+        ninja.runaWay();
         System.out.println(ninja);
 
         System.out.println(samurai);
 
-        samurai.golpeMortal(villano);
+        samurai.deadBlow(villano);
         System.out.println(villano.getHealth());
 
         System.out.println(samurai);
-        samurai.meditar();
+        samurai.meditate();
         System.out.println(samurai);
 
 
