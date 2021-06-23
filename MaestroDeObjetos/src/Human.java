@@ -54,9 +54,17 @@ public class Human {
 
     public void attack(Human a){
 
-        health = health - a.getStrength();
+        a.setHealth(a.getHealth()-this.getStrength());
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Human{" +
+                "strength=" + getStrength() +
+                ", intelligence=" + getIntelligence() +
+                ", stealth=" + getStealth() +
+                ", health=" + getHealth() +
+                '}';
+    }
 }
