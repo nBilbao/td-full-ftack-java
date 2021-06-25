@@ -10,10 +10,10 @@ public class Pokedex extends AbstractPokemon{
     }
 
     public void listPokemon(){
-        StringBuilder lista= new StringBuilder("\n ");
+        StringBuilder lista= new StringBuilder("");
         for (Pokemon datos : pokedex) {
 
-            lista.append(datos.toString());
+            lista.append("\n "+datos.toString());
 
         }
         System.out.println(lista);

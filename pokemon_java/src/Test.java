@@ -2,14 +2,6 @@ public class Test {
 
     public static void main(String[] args) {
 
-
-
-        //Pokemon picachu     = new Pokemon("Picachu",100,"dasda");
-        //Pokemon rockruff    = new Pokemon("Rockruff",100,"daRockruffsda");
-        //Pokemon lycanroc    = new Pokemon("Lycanroc",100,"dLycanrocffsda");
-        //Pokemon wishiwashi  = new Pokemon("Wishiwashi",100,"daWishiwckruffsda");
-        //Pokemon Mareanie    = new Pokemon("Mareanie",100,"daRockrufeaniea");
-
         Pokedex dex = new Pokedex();
 
         Pokemon picachu     = dex.createPokemon("Picachu",100,"dasda");
@@ -26,7 +18,7 @@ public class Test {
 
         System.out.println(dex.pokemonInfo(picachu));
 
-        //dex.listPokemon();
+        dex.listPokemon();
 
 
         System.out.println(picachu.getCount());
