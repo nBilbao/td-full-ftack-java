@@ -5,7 +5,8 @@ public class Calculator implements java.io.Serializable{
     private double operandOne =0;
     private double operandTwo =0;
     private String operation="";
-    private final ArrayList<Double> resultado = new ArrayList<>();;
+    private final ArrayList<Double> resultado = new ArrayList<>();
+    private ArrayList<Double> almacen = new ArrayList<>();
 
     public Calculator(){
 
