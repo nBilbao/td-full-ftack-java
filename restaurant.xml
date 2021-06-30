@@ -1,0 +1,27 @@
+<breakfast>
+	<item category="desayunos">
+		<name>Café milenario</name>
+		<description>Café de grano, con tostadas y dos huevos revueltos.</description>
+		<price>$ 2.000</price>
+	</item>
+	<item category="desayunos">
+		<name>Té Centenario</name>
+		<description>Té, con tostadas y jamón</description>
+		<price>$ 1.000</price>
+	</item>
+	<item category="desayunos">
+		<name>Cereal Energético</name>
+		<description>Leche con cereal, con tostadas.</description>
+		<price>$ 2.000</price>
+	</item>
+	<item category="agregados">
+		<name>Tostadas</name>
+		<description>Tostadas integrales</description>
+		<price>$ 500</price>
+	</item>
+	<item category="agregados">
+		<name>Pan integral</name>
+		<description>Pan integral</description>
+		<price>$ 500</price>
+	</item>
+</breakfast>
