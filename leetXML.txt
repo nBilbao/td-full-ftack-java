@@ -1,0 +1,2 @@
+Según lo que se aprecia, el contenido del archivo XML, se encarga de entregar la información de 
+un servlet determinado, la ubicación de este y algunos datos extras como la ruta y el archivo HTML que carga en un comienzo
