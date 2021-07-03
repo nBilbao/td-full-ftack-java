@@ -8,6 +8,7 @@ public class Pokedex extends AbstractPokemon{
         this.pokedex.add(pokemon);
 
     }
+    
 
     public void listPokemon(){
         StringBuilder lista= new StringBuilder("");
