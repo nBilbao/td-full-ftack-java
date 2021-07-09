@@ -1,7 +1,8 @@
-package com.boton.web.controller;
+package com.generadorPalabras.web.controllers;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,19 +12,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
+import com.generadorPalabras.web.models.Generador;
 
 /**
- * Servlet implementation class Contadores
+ * Servlet implementation class Index
  */
-@WebServlet("/Contadores")
-public class Contadores extends HttpServlet {
+@WebServlet("/Index")
+public class Index extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Contadores() {
+    public Index() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,28 +33,45 @@ public class Contadores extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		
-		HttpSession session = request.getSession();
-		request.setAttribute("session", session);
+		HttpSession user = request.getSession();
 		
-		if(session.getAttribute("contador") == null) {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		Date date = new Date();
+		
+		
+		
+		user.setAttribute("fecha", formatter.format(date));
+		
+		if(user.getAttribute("count")==null) {
 			
-			session.setAttribute("contador", 1);
+			user.setAttribute("count", 1);
+			
+		}
+		else{
+			
+			int conteoParcial = (int)user.getAttribute("count");
+			
+			conteoParcial = conteoParcial +1;
+			
+			user.setAttribute("count", conteoParcial);
 			
 		}
 		
-		else {
-			
-			int contador = (int)session.getAttribute("contador");
-			contador = contador +1;
-			session.setAttribute("contador", contador);
-		}
+		Generador gen = new Generador();
 		
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/view/contador.jsp");
+		request.setAttribute("gen", gen);
+		
+		
+		
+		
+		
+		
+		
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/view/index.jsp");
         view.forward(request, response);
+		
 	}
-	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
