@@ -62,12 +62,7 @@ public class Index extends HttpServlet {
 		
 		request.setAttribute("gen", gen);
 		
-		
-		
-		
-		
-		
-		
+			
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/view/index.jsp");
         view.forward(request, response);
 		
