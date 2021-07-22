@@ -34,7 +34,7 @@ public class Home extends HttpServlet {
 		// TODO Auto-generated method stub
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/view/index.jsp");
         view.forward(request, response);
-		
+        //response.sendRedirect("/NombreDelProyecto/conectado_controlador.jsp");
 		
 	}
 
