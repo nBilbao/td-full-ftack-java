@@ -1,23 +1,27 @@
+import java.util.Random;
+
 public class Persona {
 
     private String nombre="";
     private String apellido="";
     private short edad=0;
-    private Integer rut;
+    private String rut;
     private char sexo='h';
     private Double peso=0.0;
     private Double altura=0.0;
 
     public Persona() {
+        generRUT();
     }
 
     public Persona(String nombre, short edad, char sexo) {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
+        generRUT();
     }
 
-    public Persona(String nombre, String apellido, short edad, Integer rut, char sexo, Double peso, Double altura) {
+    public Persona(String nombre, String apellido, short edad, String rut, char sexo, Double peso, Double altura) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -25,6 +29,7 @@ public class Persona {
         this.sexo = sexo;
         this.peso = peso;
         this.altura = altura;
+
     }
 
     public short calcularMC(){
@@ -60,7 +65,25 @@ public class Persona {
     }
 
     public void generRUT(){
+        rut="";
+        Random random = new Random();
+        String dig ="-";
+        String comienzo ="";
 
+        for(int i=0;i<1;i++){
+
+            comienzo+=""+ random.nextInt((2 - 1) +1);
+        }
+        for(int i=0;i<3;i++){
+
+            rut+=""+ random.nextInt((10 - 1) + 1) + 1;
+        }
+        dig +=  random.nextInt((10 - 1) + 1) ;;
+
+        if (dig.equals("11")){
+            dig="k";
+        }
+        rut= comienzo+rut+dig;
     }
 
 
@@ -88,7 +111,7 @@ public class Persona {
         this.edad = edad;
     }
 
-    public Integer getRut() {
+    public String getRut() {
         return rut;
     }
 
