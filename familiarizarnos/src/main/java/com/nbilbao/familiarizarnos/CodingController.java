@@ -5,23 +5,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-
+@RequestMapping("/coding")
 public class CodingController {
-    @RequestMapping("/")
-    public String main(){
-        return "Principal";
 
-    }
-    @RequestMapping("/coding")
+    @RequestMapping()
     public String enCoding(){
         return "Hola Coding Dojo!";
     }
-    @RequestMapping("/coding/python")
+    @RequestMapping("/python")
     public String enPython(){
         return "¡Python/Django fue increíble!";
 
     }
-    @RequestMapping("/coding/java")
+    @RequestMapping("/java")
     public String enJava(){
         return "¡Java/Spring es mejor!";
 
