@@ -13,12 +13,14 @@
 </head>
 <body>
 
-<form action="#">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <input type="submit" value="Submit">
+
+
+<form action="/code.jsp" method="post" style="margin: 5% 0 0 45% ">
+    <h4 style="color: red"> <c:out value="${error}"/></h4>
+    <label for="fname">What is the code?</label><br>
+    <input type="text" id="fname" name="code"><br>
+
+    <input type="submit" value="Try Code">
 </form>
 
 </body>
