@@ -31,7 +31,7 @@
             <td><c:out value="${book.description}"/></td>
             <td><c:out value="${book.language}"/></td>
             <td><c:out value="${book.numberOfPages}"/></td>
-            <td><input type="submit" value="Submit"/></td>
+            <td><input type="submit" value="Delete"/></td>
         </tr>
 
     </tbody>
