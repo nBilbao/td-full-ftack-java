@@ -59,8 +59,8 @@ public class ListasController {
 
     @RequestMapping("/dashboard/search")
     public String topten(Model model) {
-        List<Lista> listas = listaService.allListas();
-        model.addAttribute("listas", listaService.ordenarListaDesc(listas));
+        List<Lista> listas = listaService.ordenarTopTen();
+        model.addAttribute("listas",listas) ;
         return "topten.jsp";
     }
 

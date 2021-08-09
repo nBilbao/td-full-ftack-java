@@ -21,8 +21,8 @@ public interface ListaRepository extends CrudRepository<Lista,Long> {
     //Este método borra un libro que empieza con un título específico
     Long deleteByTitleStartingWith(String search);
     List<Lista> findByTitleOrderByClassificationDesc(String classification);
-    @OrderBy("Classification DESC")
-    List<Lista> findFirst10ByClassification(@Size(min = 1, max = 10) String classification);
+
+    List<Lista> findFirst10ByClassification();
 
 
 }

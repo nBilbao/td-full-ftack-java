@@ -23,18 +23,17 @@
 <table border="1">
     <thead>
     <tr>
-        <th>Title</th>
-        <th>Artist</th>
-        <th>Classification</th>
-        <th>Action</th>
+        <th>Name</th>
+        <th>Rating</th>
+        <th>Actions</th>
 
     </tr>
     </thead>
     <tbody>
     <c:forEach items="${listas}" var="lista">
         <tr>
-            <td><c:out value="${lista.title}"/></td>
-            <td><c:out value="${lista.artist}"/></td>
+            <td> <a href="/songs/${lista.id}"><c:out value="${lista.title}"/></a></td>
+
             <td><c:out value="${lista.classification}"/></td>
             <td><a href="/songs/${lista.id}">Delete</a></td>
         </tr>

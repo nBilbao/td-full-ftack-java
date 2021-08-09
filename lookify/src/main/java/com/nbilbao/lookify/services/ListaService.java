@@ -41,12 +41,11 @@ public class ListaService {
         listaRepository.deleteById(id);
     }
 
-    public List<Lista> ordenarListaDesc(List<Lista> a){
-        List<Lista> listaOrdenada=null;
-        for (int i =0;i<a.size();i++) {
-            listaOrdenada = listaRepository.findFirst10ByClassification(a.get(0).getClassification());
-        }
+    public List<Lista> ordenarTopTen(){
 
-        return listaOrdenada;
+        return listaRepository.findFirst10ByClassification();
+
+
+
     }
 }
