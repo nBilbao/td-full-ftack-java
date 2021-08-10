@@ -57,11 +57,17 @@ public class ListasController {
 
     }
 
-    @RequestMapping("/dashboard/search")
+    @RequestMapping("/search/topten")
     public String topten(Model model) {
         List<Lista> listas = listaService.ordenarTopTen();
         model.addAttribute("listas",listas) ;
         return "topten.jsp";
+    }
+    @RequestMapping(value="/search/",method = RequestMethod.GET)
+    public String searchArtist(@RequestParam("artist") String name,@ModelAttribute("lista") Lista lista,Model model) {
+        //model.addAttribute("song",listaService.findLista(id));
+        model.addAttribute("canciones",listaService.findArtist(name));
+        return "/search.jsp";
     }
 
 

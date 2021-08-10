@@ -15,14 +15,16 @@ public interface ListaRepository extends CrudRepository<Lista,Long> {
     //Este método recupera todos los libros de la base de datos
     List<Lista> findAll();
     //Este método encuentra un libro por su descripción
-    List<Lista> findByArtistContaining(String search);
+    List<Lista> findByTitleContaining(String search);
     //Este método cuenta cuántos libros contiene cierta cadena en el título
     Long countByTitleContaining(String search);
     //Este método borra un libro que empieza con un título específico
     Long deleteByTitleStartingWith(String search);
     List<Lista> findByTitleOrderByClassificationDesc(String classification);
 
-    List<Lista> findFirst10ByClassification();
+    //List<Lista> findFirst10ByClassification();
+
+    List<Lista> findTop10ByOrderByClassificationAsc();
 
 
 }

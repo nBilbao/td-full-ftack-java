@@ -14,10 +14,10 @@
 <body>
 <a href="/dashboard">DashBoard</a><br><br><br>
 <h2>Top Ten Song's</h2>
-<c:out value="${listas.size()}"/>
+
 <ol>
-  <c:forEach items="${listas}" var="lista">
-  <li><c:out value="${lista.title}"/></li>
+  <c:forEach items="${listas}" var="artist">
+  <li><c:out value="${artist.title}"/></li>
   </c:forEach>
 </ol>
 

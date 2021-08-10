@@ -17,8 +17,8 @@ public class Lista {
     private String title;
     @Size(min = 5)
     private String artist;
-    @Size(min = 1, max = 10)
-    private String classification;
+    @Min(1)
+    private int classification;
 
     // Esto no permitirá que el campo createdAt sea modificado después de su creación.
     @Column(updatable=false)
@@ -29,7 +29,7 @@ public class Lista {
 
     public Lista() {
     }
-    public Lista(String title, String artist, String classification) {
+    public Lista(String title, String artist, int classification) {
 
         this.title = title;
         this.artist = artist;
@@ -66,11 +66,11 @@ public class Lista {
         this.artist = artist;
     }
 
-    public String getClassification() {
+    public int getClassification() {
         return classification;
     }
 
-    public void setClassification(String classification) {
+    public void setClassification(int classification) {
         this.classification = classification;
     }
 

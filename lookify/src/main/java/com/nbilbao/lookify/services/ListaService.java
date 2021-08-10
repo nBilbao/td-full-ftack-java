@@ -43,9 +43,13 @@ public class ListaService {
 
     public List<Lista> ordenarTopTen(){
 
-        return listaRepository.findFirst10ByClassification();
+        return listaRepository.findTop10ByOrderByClassificationAsc();
 
 
 
+    }
+
+    public List<Lista> findArtist(String artist){
+        return listaRepository.findByTitleContaining(artist);
     }
 }
