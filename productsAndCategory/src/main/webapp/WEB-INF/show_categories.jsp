@@ -51,7 +51,7 @@
 <!-- 	******************* -->
 <main>
     <div class="container mt-5">
-        <h2>All Products</h2>
+        <h2>Category: ${categories.name}</h2>
             <ul>
             <c:forEach items="${categories.products}" var="products">
                 <li><c:out value="${products.name}"/></li>
@@ -60,11 +60,11 @@
     </div>
     <div class="container mt-5">
         <h2>Add Product</h2>
-        <form:form action="/categories" method="post" modelAttribute="products">
+        <form:form action="/categories" method="post" modelAttribute="allProducts">
 
             <p>
                 <form:select path="empty">
-                    <c:forEach items="${products}" var="product">
+                    <c:forEach items="${allProducts}" var="product">
                         <form:option value="${product.name}"/>
                     </c:forEach>
                 </form:select>
@@ -75,6 +75,14 @@
         </form:form>
     </div>
 </main>
+<div class="container mt-5">
+    <h2>Category: ${categories.products.size()}</h2>
+    <ul>
+        <c:forEach items="${categories.products}" var="products">
+            <li><c:out value="${products.name}"/></li>
+        </c:forEach>
+    </ul>
+</div>
 
 
 

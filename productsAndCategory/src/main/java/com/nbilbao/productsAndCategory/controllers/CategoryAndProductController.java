@@ -1,7 +1,9 @@
 package com.nbilbao.productsAndCategory.controllers;
 
 import com.nbilbao.productsAndCategory.models.Category;
+import com.nbilbao.productsAndCategory.models.CategoryProduct;
 import com.nbilbao.productsAndCategory.models.Product;
+import com.nbilbao.productsAndCategory.services.CategoryProductService;
 import com.nbilbao.productsAndCategory.services.CategoryService;
 import com.nbilbao.productsAndCategory.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,8 @@ public class CategoryAndProductController {
     CategoryService categoryService;
     @Autowired
     ProductService productService;
+    @Autowired
+    CategoryProductService categoryProductService;
 
 
     @RequestMapping("/products")
@@ -72,13 +76,36 @@ public class CategoryAndProductController {
     @RequestMapping("/categories/{id}")
     public String showCategories(@PathVariable("id")Long id, Model model){
         Category categories = categoryService.findCategory(id);
-        List<Product> products = productService.allProducts();
+        List<Product> allProducts = productService.allProducts();
+        CategoryProduct almacen = new CategoryProduct();
 
 
         model.addAttribute("categories",categories);
-        model.addAttribute("products",products);
+        model.addAttribute("allProducts",allProducts);
+        model.addAttribute("almacen",almacen);
+
 
         return "/show_categories.jsp";
+
+    }
+    @RequestMapping(value="/categories/{id}", method=RequestMethod.POST)
+    public String update(@Valid @ModelAttribute("product") Product producto, BindingResult result,@PathVariable("id")Long idCategory,Model model) {
+        Category category =   categoryService.findCategory(idCategory);
+        Product objProduct = productService.getProductById(producto.getId());
+        CategoryProduct almacen = new CategoryProduct();
+        almacen.setCategory(category);
+        almacen.setProduct(objProduct);
+
+
+
+
+        if (result.hasErrors()) {
+            return "/categories/{id}";
+        } else {
+
+            categoryProductService.updateCategoryProduct(almacen);
+            return "redirect:/categories";
+        }
 
     }
 }

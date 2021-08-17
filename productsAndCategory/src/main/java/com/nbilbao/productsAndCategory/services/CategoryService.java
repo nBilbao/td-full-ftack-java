@@ -1,6 +1,8 @@
 package com.nbilbao.productsAndCategory.services;
 
 import com.nbilbao.productsAndCategory.models.Category;
+import com.nbilbao.productsAndCategory.models.CategoryProduct;
+import com.nbilbao.productsAndCategory.models.Product;
 import com.nbilbao.productsAndCategory.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,4 +26,13 @@ public class CategoryService {
     public Category findCategory(Long id) {
         return categoryRepository.findById(id).orElse(null);
     }
+
+    public void updateCategory(Category categories) {
+
+        categoryRepository.save(categories);
+
+    }
+
+
+
 }

@@ -20,4 +20,8 @@ public class ProductService {
     public void createProduct(Product products) {
         productRepository.save(products);
     }
+
+    public Product getProductById(Long producto) {
+        return productRepository.findById(producto).orElse(null);
+    }
 }

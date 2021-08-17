@@ -82,4 +82,7 @@ public class Product {
     public void setCategories(List<Category> categories) {
         this.categories = categories;
     }
+    public void addCategories(Category category){
+        this.categories.add(category);
+    }
 }
