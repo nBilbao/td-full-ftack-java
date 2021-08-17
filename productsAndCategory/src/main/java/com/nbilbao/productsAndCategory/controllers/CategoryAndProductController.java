@@ -73,7 +73,7 @@ public class CategoryAndProductController {
         }
     }
 
-    @RequestMapping("/categories/{id}")
+    @RequestMapping(value = "/categories/{id}", method = RequestMethod.GET)
     public String showCategories(@PathVariable("id")Long id, Model model){
         Category categories = categoryService.findCategory(id);
         List<Product> allProducts = productService.allProducts();
@@ -90,8 +90,10 @@ public class CategoryAndProductController {
     }
     @RequestMapping(value="/categories/{id}", method=RequestMethod.POST)
     public String update(@Valid @ModelAttribute("product") Product producto, BindingResult result,@PathVariable("id")Long idCategory,Model model) {
+
         Category category =   categoryService.findCategory(idCategory);
         Product objProduct = productService.getProductById(producto.getId());
+        System.out.println(objProduct.getName());
         CategoryProduct almacen = new CategoryProduct();
         almacen.setCategory(category);
         almacen.setProduct(objProduct);

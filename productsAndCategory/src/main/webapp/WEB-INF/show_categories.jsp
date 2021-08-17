@@ -60,12 +60,12 @@
     </div>
     <div class="container mt-5">
         <h2>Add Product</h2>
-        <form:form action="/categories" method="post" modelAttribute="allProducts">
+        <form:form action="/categories/${categories.id}" method="post" modelAttribute="allProducts">
 
             <p>
-                <form:select path="empty">
+                <form:select path="empty" >
                     <c:forEach items="${allProducts}" var="product">
-                        <form:option value="${product.name}"/>
+                        <form:option value="${product}" label="${product.name}"/>
                     </c:forEach>
                 </form:select>
 
