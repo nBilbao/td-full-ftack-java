@@ -26,9 +26,10 @@ public class Users {
     public String registerForm(@ModelAttribute("user") User user) {
         return "registrationPage.jsp";
     }
+
     @RequestMapping("/login")
     public String login() {
-        return "loginPage.jsp";
+        return "login2.jsp";
     }
     
     @RequestMapping(value="/registration", method=RequestMethod.POST)
@@ -53,7 +54,7 @@ public class Users {
     		session.setAttribute("idUsuario", user.getId());
     		return home(session,model);
     	}else {
-    		return "loginPage.jsp?error=true";
+    		return "login2.jsp?error=true";
     	}
     }
     
@@ -75,6 +76,6 @@ public class Users {
         // invalidar la sesión
         // redireccionar a la página de inicio de sesión.
     	session.invalidate();
-    	return "loginPage.jsp";
+    	return "login2.jsp";
     }
 }
